@@ -19,8 +19,8 @@ def predict():
         list.append(float(Plength))
         list.append(float(Pwidth))
 
-        name, ac_score = ex04.returnName(list)
-        return render_template('predict.html', name=name, ac_score=ac_score)
+        name, ac = ex04.returnName(list)
+        return render_template('predict.html', name=name, ac=ac)
     return render_template('predict.html')
 
 if __name__ == '__main__':

@@ -18,5 +18,7 @@ def returnName(list):
     new_list.append(list)
     pre2 = clf.predict(new_list)
     name = pre2[0]
+    ac = int(ac_score * 100)
 
-    return name, ac_score
+    return name, ac
+
