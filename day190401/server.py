@@ -8,13 +8,19 @@ app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 def predict():
     if request.method == 'POST':
         list = []
-        Slength = float(request.form['Slength'])
-        Swidth = float(request.form['Swidth'])
-        Plength = float(request.form['Plength'])
-        Pwidth = float(request.form['Pwidth'])
-        list.append(Slength, Swidth, Plength, Pwidth)
+
+        Slength = request.form['Slength']
+        Swidth = request.form['Swidth']
+        Plength = request.form['Plength']
+        Pwidth = request.form['Pwidth']
+
+        list.append(float(Slength))
+        list.append(float(Swidth))
+        list.append(float(Plength))
+        list.append(float(Pwidth))
+
         name, ac_score = ex04.returnName(list)
-        return render_template('predictName.html', name=name, ac_score=ac_score)
+        return render_template('predict.html', name=name, ac_score=ac_score)
     return render_template('predict.html')
 
 if __name__ == '__main__':
