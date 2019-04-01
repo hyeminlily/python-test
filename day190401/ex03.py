@@ -17,3 +17,7 @@ pre = clf.predict(test_data)
 ac_score = metrics.accuracy_score(test_label, pre)
 print("정답률 : ", ac_score)
 
+real_data = [[5.8, 2.7, 4.1, 1.0]]
+pre2 = clf.predict(real_data)
+print(pre2)
+
