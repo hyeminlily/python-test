@@ -68,3 +68,10 @@ arr_score = np.array(score)
 k = np.argsort(arr_score)[::-1]     # 내림차순으로 index를 반환
 print(arr_name[k])
 
+# My ver.
+print(arr_name[k][0])
+
+# Teacher ver.
+l = np.argmax(arr_score)
+print(arr_name[l])
+
