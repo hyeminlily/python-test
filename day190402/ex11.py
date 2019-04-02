@@ -28,9 +28,9 @@ import numpy as np
 # print(c)
 
 # My ver.
-# d = np.zeros([5, 5], dtype=np.int32)
-# d[[0, 1, 2, 3, 4], [0, 1, 2, 3, 4]] = 1
-# print(d)
+d = np.zeros([5, 5], dtype=np.int32)
+d[[0, 1, 2, 3, 4], [0, 1, 2, 3, 4]] = 1
+print(d)
 
 e = [1, 3, 0, 3, 1]
 f = np.zeros([len(e), max(e)+1], dtype=np.int32)
