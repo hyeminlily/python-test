@@ -50,15 +50,15 @@ import numpy as np
 # i = np.eye(len(e), np.max(e)+1, dtype='int32')[e]
 # print(i)
 
-h = [4, 3, 1, 5, 2]
-arr1 = np.array(h)
-arr1.sort()
-print(arr1)
-
-# argsort(): 정렬 후 index 순서대로 배열을 생성
-j = np.argsort(arr1)      # [2, 4, 1, 0, 3] = index 위치!
-print(j)
-
+# h = [4, 3, 1, 5, 2]
+# arr1 = np.array(h)
+# arr1.sort()
+# print(arr1)
+#
+# # argsort(): 정렬 후 index 순서대로 배열을 생성
+# j = np.argsort(arr1)      # [2, 4, 1, 0, 3] = index 위치!
+# print(j)
+#
 name = ['홍길동', '강감찬', '이순신', '유관순', '장영실']
 score = [80, 90, 100, 70, 95]
 
@@ -66,7 +66,7 @@ arr_name = np.array(name)
 arr_score = np.array(score)
 
 k = np.argsort(arr_score)[::-1]     # 내림차순으로 index를 반환
-print(arr_name[k])
+# print(arr_name[k])
 
 # My ver.
 print(arr_name[k][0])
@@ -74,4 +74,10 @@ print(arr_name[k][0])
 # Teacher ver.
 l = np.argmax(arr_score)
 print(arr_name[l])
+
+# 동점 처리
+name = np.array(['임꺽정', '홍길동', '강감찬', '이순신', '유관순', '장영실', '주시경'])
+score = np.array([100, 80, 90, 100, 70, 95, 100], dtype=np.int32)
+max = np.argwhere(score == np.amax(score))
+print(name[max])
 
