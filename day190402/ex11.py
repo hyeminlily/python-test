@@ -38,7 +38,6 @@ f = np.zeros([len(e), max(e)+1], dtype=np.int32)
 
 for ef in range(len(e)):
     f[ef, e[ef]] = 1
-
 print(f)
 
 # Teacher ver.
