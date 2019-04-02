@@ -79,5 +79,5 @@ print(arr_name[l])
 name = np.array(['임꺽정', '홍길동', '강감찬', '이순신', '유관순', '장영실', '주시경'])
 score = np.array([100, 80, 90, 100, 70, 95, 100], dtype=np.int32)
 max = np.argwhere(score == np.amax(score))
-print(name[max])
+print(name[max].ravel())
 
