@@ -27,26 +27,31 @@ import numpy as np
 # c[[0, -1], :] = 1
 # print(c)
 
-# My ver.
-d = np.zeros([5, 5], dtype=np.int32)
-d[[0, 1, 2, 3, 4], [0, 1, 2, 3, 4]] = 1
-print(d)
+# # My ver.
+# d = np.zeros([5, 5], dtype=np.int32)
+# d[[0, 1, 2, 3, 4], [0, 1, 2, 3, 4]] = 1
+# print(d)
+#
+# g = np.eye(5, 5, dtype='int32')
+# print(g)
+#
+# # My ver.
+# e = [1, 3, 0, 3, 1]
+# f = np.zeros([len(e), max(e)+1], dtype=np.int32)
+#
+# for ef in range(len(e)):
+#     f[ef, e[ef]] = 1
+# print(f)
+#
+# # Teacher ver.
+# f[[range(len(e))], e] = 1
+# print(f)
+#
+# i = np.eye(len(e), np.max(e)+1, dtype='int32')[e]
+# print(i)
 
-g = np.eye(5, 5, dtype='int32')
-print(g)
-
-# My ver.
-e = [1, 3, 0, 3, 1]
-f = np.zeros([len(e), max(e)+1], dtype=np.int32)
-
-for ef in range(len(e)):
-    f[ef, e[ef]] = 1
-print(f)
-
-# Teacher ver.
-f[[range(len(e))], e] = 1
-print(f)
-
-i = np.eye(len(e), np.max(e)+1, dtype='int32')[e]
-print(i)
+k = [4, 3, 1, 5, 2]
+arr1 = np.array(k)
+arr1.sort()
+print(arr1)
 
