@@ -6,7 +6,7 @@ fontName = font_manager.FontProperties(fname='C:/WINDOWS/Fonts/H2GTRE.ttf').get_
 rc('font', family=fontName)
 
 txt = []
-with open('gdp.txt', 'r', encoding='UTF-8') as data:
+with open('../Data/2016_GDP.txt', 'r', encoding='UTF-8') as data:
     for line in data:
         line = line.strip()
         line = line.split(':')
