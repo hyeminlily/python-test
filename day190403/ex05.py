@@ -6,7 +6,7 @@ fontName = font_manager.FontProperties(fname='C:/WINDOWS/Fonts/H2GTRE.ttf').get_
 rc('font', family=fontName)
 
 txt = []
-with open('../Data/2016_GDP.txt', 'r', encoding='UTF-8') as data:
+with open('gdp.txt', 'r', encoding='UTF-8') as data:
     for line in data:
         line = line.strip()
         line = line.split(':')
@@ -24,3 +24,4 @@ gdp = np.array(top_10[:, -1], dtype=np.int32)
 plt.bar(country, gdp)
 plt.title("2016년 세계 GDP 상위 10개국")
 plt.show()
+
