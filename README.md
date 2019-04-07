@@ -1,2 +1,2 @@
 # python-test
-some tests using the python for my Big-data class
+Some tests using the python in my class
