@@ -17,11 +17,11 @@ b = a.loc[cnt_500.index]
 # c = b.sort_values(by='diff', ascending=False)
 # print(c.head())
 
-b['mdiff'] = b['M'] - b['F']
-c = b.sort_values(by='mdiff', ascending=False)
-print(c.head())
+# b['mdiff'] = b['M'] - b['F']
+# c = b.sort_values(by='mdiff', ascending=False)
+# print(c.head())
 
-b['mdiff'] = b['M'] - b['F']
-c = b.sort_values(by='mdiff', ascending=False)
+b['wdiff'] = b['F'] - b['M']
+c = b.sort_values(by='wdiff', ascending=False)
 print(c.head())
 
