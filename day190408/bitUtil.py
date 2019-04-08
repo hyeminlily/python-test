@@ -1,5 +1,4 @@
 def getMovies():
-    import numpy as np
     import pandas as pd
 
     # scores = pd.read_csv("Data/scores.csv")
