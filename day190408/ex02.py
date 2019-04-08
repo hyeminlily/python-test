@@ -30,6 +30,7 @@ age_gender_mean = df.pivot_table(values='rating', index='age', columns='gender',
 gender_age_mean = df.pivot_table(values='rating', index='gender', columns='age', aggfunc='mean')
 #print(gender_age_mean)
 
-age_gender_mean.plot()
+age_gender_mean.index = ["under 18", "18-24", "25-34", "35-44", "45-49", "50-55", "56+"]
+age_gender_mean.plot(kind="bar")    # default는 선 그래프!
 plt.show()
 
