@@ -18,6 +18,7 @@ df = bitUtil.getMovies()
 # r3 = r2.stack()         # columns → index
 # print(r3)
 
-sum_mean = df.pivot_table(values='rating', index='age', columns='gender', aggfunc=['mean', 'sum'])
+# sum_mean = df.pivot_table(values='rating', index='age', columns='gender', aggfunc=['mean', 'sum'])
+sum_mean = df.pivot_table(values='rating', index='age', columns='gender', aggfunc=[np.mean, np.sum])
 print(sum_mean)
 
