@@ -14,9 +14,12 @@ gender_sum = df.pivot_table(values='rating', index='gender', aggfunc='sum')
 gender_max = df.pivot_table(values='rating', index='gender', aggfunc='max')
 gender_min = df.pivot_table(values='rating', index='gender', aggfunc='min')
 
-print(gender_mean)
-print(gender_mean2)
-print(gender_sum)
-print(gender_max)
-print(gender_min)
+# print(gender_mean)
+# print(gender_mean2)
+# print(gender_sum)
+# print(gender_max)
+# print(gender_min)
+
+age_mean = df.pivot_table(values='rating', index='age')
+print(age_mean)
 
