@@ -1,5 +1,6 @@
 import bitUtil
 import numpy as np
+import pandas as pd
 
 df = bitUtil.getMovies()
 
@@ -19,6 +20,16 @@ df = bitUtil.getMovies()
 # print(r3)
 
 # sum_mean = df.pivot_table(values='rating', index='age', columns='gender', aggfunc=['mean', 'sum'])
-sum_mean = df.pivot_table(values='rating', index='age', columns='gender', aggfunc=[np.mean, np.sum])
-print(sum_mean)
+# sum_mean = df.pivot_table(values='rating', index='age', columns='gender', aggfunc=[np.mean, np.sum])
+# print(sum_mean)
+
+r1 = df.pivot_table(values='rating', index='age', columns='gender', aggfunc='mean')
+r2 = df.pivot_table(values='rating', index='gender', columns='age', aggfunc='mean')
+
+# r3 = pd.merge(r1, r2)       # 오류
+r3 = pd.concat([r1, r2])
+print(r3)
+
+r4 = pd.concat([r1, r2], axis=1)
+print(r4)
 
