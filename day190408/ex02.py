@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 import bitUtil
 
 df = bitUtil.getMovies()
@@ -24,8 +25,11 @@ age_mean = df.pivot_table(values='rating', index='age')
 # print(age_mean)
 
 age_gender_mean = df.pivot_table(values='rating', index='age', columns='gender', aggfunc='mean')
-print(age_gender_mean)
+# print(age_gender_mean)
 
 gender_age_mean = df.pivot_table(values='rating', index='gender', columns='age', aggfunc='mean')
-print(gender_age_mean)
+#print(gender_age_mean)
+
+age_gender_mean.plot()
+plt.show()
 
