@@ -37,3 +37,6 @@ age_gender_mean.index = ["under 18", "18-24", "25-34", "35-44", "45-49", "50-55"
 r_mean = df.pivot_table(values='rating', index='gender', columns='age', fill_value=0, aggfunc='mean')
 print(r_mean)
 
+r_mean2 = r_mean.unstack()
+print(r_mean2)
+
