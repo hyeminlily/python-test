@@ -21,5 +21,11 @@ gender_min = df.pivot_table(values='rating', index='gender', aggfunc='min')
 # print(gender_min)
 
 age_mean = df.pivot_table(values='rating', index='age')
-print(age_mean)
+# print(age_mean)
+
+age_gender_mean = df.pivot_table(values='rating', index='age', columns='gender', aggfunc='mean')
+print(age_gender_mean)
+
+gender_age_mean = df.pivot_table(values='rating', index='gender', columns='age', aggfunc='mean')
+print(gender_age_mean)
 
