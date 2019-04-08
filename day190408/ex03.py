@@ -14,6 +14,6 @@ r2 = r1.unstack()
 # print(r1)
 # print(r2)
 
-r3 = r2.stack()
+r3 = r2.stack()         # columns → index
 print(r3)
 
