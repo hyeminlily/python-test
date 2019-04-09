@@ -17,3 +17,12 @@ r = np.array([[0, 0, 1]])
 s = lb2.inverse_transform(r)
 print(s)
 
+x3 = ['paris', 'tokyo', 'london', 'paris']
+lb3 = preprocessing.LabelBinarizer()
+b = lb3.fit_transform(x3)
+print(b)
+
+r2 = np.array([[1, 0, 0]])
+result = lb3.inverse_transform(r2)
+print(result)
+
