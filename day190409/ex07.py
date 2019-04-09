@@ -7,3 +7,11 @@ import numpy as np
 x = [[0, 1], [3, 5]]
 x2 = preprocessing.add_dummy_feature(x)     # value 생략시 각 행마다 1을 추가함
 print(x2)
+
+x3 = [[0, 1, 2],[3, 4, 5]]
+x4 = preprocessing.add_dummy_feature(x3, 9)
+print(x4)
+
+x5 = preprocessing.add_dummy_feature(x2, 7)
+print(x5)
+
