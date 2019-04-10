@@ -1,8 +1,11 @@
 import numpy as np
 import pandas as pd
+import xlrd
 
-df = pd.read_csv("baseball.txt")
+df = pd.read_excel("MLB World Series Champions_ 1903-2016.xlsx")
 # print(df)
+# print(df.head())
+# print(df.columns)
 
 # 팀별로 우승한 횟수 출력
 # win_cnt = df.pivot_table(values='Wins', index='Champion', aggfunc='count')
