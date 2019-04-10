@@ -34,8 +34,12 @@ df = pd.read_excel("MLB World Series Champions_ 1903-2016.xlsx")
 # New York Yankees 팀이 처음 우승한 연도와 마지막으로 우승한 연도 출력
 nyy_win = df[df['Champion'] == 'New York Yankees']
 nyy_win_sort = nyy_win.sort_values(by='Year')
+
 print(nyy_win_sort.iloc[0][0])
 print(nyy_win_sort.iloc[-1][0])
+
+print(nyy_win['Year'].min())
+print(nyy_win['Year'].max())
 
 # # New York Yankees의 평균 승률 출력
 # nyy = df[df['Champion'] == 'New York Yankees']
