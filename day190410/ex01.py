@@ -55,3 +55,8 @@ x = np.arange(int(df['Year'].min()), int(df['Year'].max()+1))
 notYear = list(set(list(x)) - set(list(df['Year'])))
 print(notYear)
 
+a = np.arange(int(df['Year'].min()), int(df['Year'].max()+1))
+b = np.array(df['Year'])
+notYear_byT = np.setdiff1d(a, b)
+print(notYear_byT)
+
