@@ -11,13 +11,13 @@ df = pd.read_excel("MLB World Series Champions_ 1903-2016.xlsx")
 # win_cnt = df.pivot_table(values='Wins', index='Champion', aggfunc='count')
 # print(win_cnt)
 
-# 우승팀들의 평균 승률 출력
+# # 우승팀들의 평균 승률 출력
 win_ratio = df.pivot_table(values='WinRatio', index='Champion', aggfunc='mean')
-print(win_ratio)
+# print(win_ratio)
 
 # 평균 승률이 높은 상위 5개 팀 출력
-# top5_mean = win_ratio.sort_values(by='WinRatio', ascending=False)
-# print(top5_mean.head())
+top5_mean = win_ratio.sort_values(by='WinRatio', ascending=False)
+print(top5_mean.head())
 
 # 2000년 이후의 데이터 중 평균 승률이 가장 높은 상위 5개 팀 출력
 
