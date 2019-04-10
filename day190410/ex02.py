@@ -17,30 +17,23 @@ gender = data[data['sex'] == ' Female']
 # print(gender)
 
 income_2 = gender[gender['income'] == ' >50K']
-print(len(income_2),'명')  # 1179 명
+print(len(income_2), '명')  # 1179 명
 
 # 예제3. 50000달러 이상인 사람들의 평균나이는 몇살인가요
-
 income_3 = data[data['income'] == ' >50K']
 print(income_3['age'].mean())   # 44.24984058155847
 
 # 예제4. 가장 많은 직업군은 무엇인가요
-
 many_job = data.pivot_table(values='age', index='occupation', aggfunc='count').sort_values(by='age', ascending=False)
-
 print(many_job[:1])
 print(many_job.head(1))
 
-
 # 예제5. 가장 많은 학력은 무엇인가요
-
 many_edu = data.pivot_table(values='age', index='education', aggfunc='count').sort_values(by='age', ascending=False)
-
 print(many_edu[:1])
 print(many_edu.head(1))
 
 # 예제6. 5000달러 이상인 직업중에 주당 일하는 시간이 가장 적은 직업군 top5은 무엇인가요
-
 income_4 = data[data['income'] == ' >50K']
 less_time = income_4.pivot_table(values='hours-per-week', index='occupation', aggfunc='mean')
 less_time_income = less_time.sort_values(by='hours-per-week')
