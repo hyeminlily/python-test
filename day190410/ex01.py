@@ -31,10 +31,16 @@ df = pd.read_excel("MLB World Series Champions_ 1903-2016.xlsx")
 # print(len(only_win_100))
 # print(only_win_100)
 
-# New York Yankees의 평균 승률 출력
-nyy = df[df['Champion'] == 'New York Yankees']
-nyy_ratio = nyy.pivot_table(values='WinRatio', index='Champion', aggfunc='mean')
-print(nyy_ratio)
+# New York Yankees 팀이 처음 우승한 연도와 마지막으로 우승한 연도 출력
+nyy_win = df[df['Champion'] == 'New York Yankees']
+nyy_win_sort = nyy_win.sort_values(by='Year')
+print(nyy_win_sort.iloc[0][0])
+print(nyy_win_sort.iloc[-1][0])
+
+# # New York Yankees의 평균 승률 출력
+# nyy = df[df['Champion'] == 'New York Yankees']
+# nyy_ratio = nyy.pivot_table(values='WinRatio', index='Champion', aggfunc='mean')
+# print(nyy_ratio)
 
 # 최다 우승 Top5 출력
 # top5 = win_cnt.sort_values(by='Wins', ascending=False)
