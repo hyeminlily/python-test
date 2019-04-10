@@ -31,15 +31,15 @@ df = pd.read_excel("MLB World Series Champions_ 1903-2016.xlsx")
 # print(len(only_win_100))
 # print(only_win_100)
 
-# New York Yankees 팀이 처음 우승한 연도와 마지막으로 우승한 연도 출력
-nyy_win = df[df['Champion'] == 'New York Yankees']
-nyy_win_sort = nyy_win.sort_values(by='Year')
-
-print(nyy_win_sort.iloc[0][0])
-print(nyy_win_sort.iloc[-1][0])
-
-print(nyy_win['Year'].min())
-print(nyy_win['Year'].max())
+# # New York Yankees 팀이 처음 우승한 연도와 마지막으로 우승한 연도 출력
+# nyy_win = df[df['Champion'] == 'New York Yankees']
+# nyy_win_sort = nyy_win.sort_values(by='Year')
+#
+# print(nyy_win_sort.iloc[0][0])
+# print(nyy_win_sort.iloc[-1][0])
+#
+# print(nyy_win['Year'].min())
+# print(nyy_win['Year'].max())
 
 # # New York Yankees의 평균 승률 출력
 # nyy = df[df['Champion'] == 'New York Yankees']
@@ -51,3 +51,7 @@ print(nyy_win['Year'].max())
 # print(top5.head())
 
 # 월드시리즈 열리지 않는 연도 출력
+x = np.arange(int(df['Year'].min()), int(df['Year'].max()+1))
+notYear = list(set(list(x)) - set(list(df['Year'])))
+print(notYear)
+
