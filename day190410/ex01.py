@@ -24,10 +24,12 @@ df = pd.read_excel("MLB World Series Champions_ 1903-2016.xlsx")
 # mean_2000 = win_2000.pivot_table(values='WinRatio', index='Champion', aggfunc='mean')
 # top5_2000 = mean_2000.sort_values(by='WinRatio', ascending=False)
 # print(top5_2000.head())
-
-# 100승 이상 승리한 팀 출력
+#
+# # 100승 이상 승리한 팀 출력
 win_100 = df[df['Wins'] >= 100]
-print(win_100)
+only_win_100 = win_100['Champion'].unique()
+print(len(only_win_100))
+print(only_win_100)
 
 # New York Yankees의 평균 승률 출력
 # nyy = df[df['Champion'] == 'New York Yankees']
