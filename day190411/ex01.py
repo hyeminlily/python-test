@@ -1,4 +1,3 @@
-
 # one-hot Encoding: 기계 학습을 위해서는 값의 범위가 큰 것보다는 작은 것이 더 효율적. (0과 1로 만듦)
 # function: 1) get_dummies (1,2차원 모두 및 column 이름 생성) (by pandas)
 #              → 만약 일차원 배열인 경우) 숫자 or 문자든 one-hot Encoding을 만들어 줌.
@@ -29,13 +28,11 @@ new_df = pd.get_dummies(df)
 # print(new_df.head())
 # print(new_df.columns)
 
-
 # 문제와 답을 분리
 x = new_df.iloc[:, :44]
 y = new_df.iloc[:, -1]
 # print(x.shape)    # 2차원
 # print(y.shape)    # 1차원
-
 
 # 문제와 답을 훈련에 참여시킬 데이터와 검증을 위한 데이터로 분리
 train_x, test_x, train_y, test_y = model_selection.train_test_split(x, y)
@@ -50,8 +47,6 @@ b = a[a == True]            # True만 추출
 
 print("정답률 : ", len(b) / len(test_y) * 100)
 
-
 # 정답률 계산 → LogisticRegression()의 score()
 c = lr.score(test_x, test_y)
 print(c)
-
